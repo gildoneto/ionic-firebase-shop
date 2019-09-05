@@ -1,0 +1,19 @@
+.ocean {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background: var(--ion-color-primary);
+}
+
+.waves {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-image: url('src/assets/img/waves.png');
+    background-size: countain;
+    transition: all 0.5s;
+  }

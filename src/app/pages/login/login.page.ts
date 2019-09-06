@@ -8,17 +8,20 @@ import { IonSlides } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
+  public wavesPosition: number = 0;
+  public wavesDifference: number = 80;
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-segmentChanged(event: any) {
+  segmentChanged(event: any) {
     if (event.detail.value === 'login') {
       this.slides.slidePrev();
-      //this.wavesPosition += this.wavesDifference;
+      this.wavesPosition += this.wavesDifference;
     } else {
       this.slides.slideNext();
-      //this.wavesPosition -= this.wavesDifference;
+      this.wavesPosition -= this.wavesDifference;
     }
   }
 }

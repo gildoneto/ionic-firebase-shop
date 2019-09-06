@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async login() {
+ async login() {
     await this.presentLoading();
 
     try {

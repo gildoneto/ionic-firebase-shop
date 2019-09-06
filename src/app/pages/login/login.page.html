@@ -1,51 +1,119 @@
 <ion-content>
-<ion-slides>
-  <ion-slide>
-    <div class="slide-inner ion-padding">
-      <span>Login</span>
 
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-input type="email" placeholder="E-mail"></ion-input>
-      </ion-item>
+    <div class="container top">
+        <img src="/assets/img/logo.png">
 
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-input type="password" placeholder="Senha"></ion-input>
-      </ion-item>
-
-      <ion-button class="ion-margin-top" (click)="login()" color="light" expand="block">
-        Entrar
-      </ion-button>
+        <ion-segment
+            (ionChange)="segmentChanged($event)"
+            mode="ios"
+            value="login"
+        >
+            <ion-segment-button
+                mode="ios"
+                value="login"
+            >
+                <ion-label>Login</ion-label>
+            </ion-segment-button>
+            <ion-segment-button
+                mode="ios"
+                value="register"
+            >
+                <ion-label>Cadastro</ion-label>
+            </ion-segment-button>
+        </ion-segment>
     </div>
-  </ion-slide>
 
-  <ion-slide>
-    <div class="slide-inner ion-padding">
-      <span>Cadastro</span>
+    <ion-slides>
+        <ion-slide>
+            <div class="slide-inner ion-padding">
+                <span>Login</span>
 
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-input type="text" placeholder="Nome"></ion-input>
-      </ion-item>
+                <ion-item
+                    class="ion-margin-top"
+                    lines="none"
+                >
+                    <ion-input
+                        type="email"
+                        placeholder="E-mail"
+                    ></ion-input>
+                </ion-item>
 
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-input type="email" placeholder="E-mail"></ion-input>
-      </ion-item>
+                <ion-item
+                    class="ion-margin-top"
+                    lines="none"
+                >
+                    <ion-input
+                        type="password"
+                        placeholder="Senha"
+                    ></ion-input>
+                </ion-item>
 
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-input type="password" placeholder="Senha"></ion-input>
-      </ion-item>
+                <ion-button
+                    class="ion-margin-top"
+                    (click)="login()"
+                    color="light"
+                    expand="block"
+                >
+                    Entrar
+                </ion-button>
+            </div>
+        </ion-slide>
 
-      <ion-button class="ion-margin-top" (click)="register()" color="light" expand="block">
-        Cadastrar
-      </ion-button>
+        <ion-slide>
+            <div class="slide-inner ion-padding">
+                <span>Cadastro</span>
+
+                <ion-item
+                    class="ion-margin-top"
+                    lines="none"
+                >
+                    <ion-input
+                        type="text"
+                        placeholder="Nome"
+                    ></ion-input>
+                </ion-item>
+
+                <ion-item
+                    class="ion-margin-top"
+                    lines="none"
+                >
+                    <ion-input
+                        type="email"
+                        placeholder="E-mail"
+                    ></ion-input>
+                </ion-item>
+
+                <ion-item
+                    class="ion-margin-top"
+                    lines="none"
+                >
+                    <ion-input
+                        type="password"
+                        placeholder="Senha"
+                    ></ion-input>
+                </ion-item>
+
+                <ion-button
+                    class="ion-margin-top"
+                    (click)="register()"
+                    color="light"
+                    expand="block"
+                >
+                    Cadastrar
+                </ion-button>
+            </div>
+        </ion-slide>
+    </ion-slides>
+
+    <div class="ocean">
+        <div class="waves"></div>
+
+        <div class="container bottom ion-text-center">
+            <span>
+                Aplicativo de Compras Construído em Ionic + Firebase + Angular
+                <br>
+                developed by Gildo Neto
+            </span>
+        </div>
     </div>
-  </ion-slide>
-</ion-slides>
-
-<div class="ocean">
-  <div class="waves"></div>
-
-    <div class="container ion-text-center">
-    <span>Aplicativo de Compras Construído em Ionic + Firebase + Angular<br/>developed by gildoso</span>
-  </div>
-</div>
 </ion-content>

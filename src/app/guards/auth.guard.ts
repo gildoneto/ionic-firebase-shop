@@ -13,7 +13,8 @@ export class AuthGuard implements CanActivate {
   ) { }
 
   /*Esse canActivate vai fazer com que ele retorne
-    pra página de login caso não estaja logado */
+    pra página de login caso não estaja logado
+    aos 26 min do vídeo #2*/
   canActivate(): Promise<boolean> {
     return new Promise(resolve => {
       this.authService.getAuth().onAuthStateChanged(user => {

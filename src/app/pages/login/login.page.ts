@@ -7,7 +7,12 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  @ViewChild(IonSlides) slides: IonSlides;
+  // Na versão do Angular 8 é requerido que o
+  // @ViewChild tenha um flag para especificar se
+  // a query é estática ou dinâmica
+  // https://angular.io/guide/static-query-migration
+  // https://github.com/angular/angular-cli/issues/14553
+  @ViewChild(IonSlides, {static:true}) slides: IonSlides;
   public wavesPosition: number = 0;
   public wavesDifference: number = 80;
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginPage implements OnInit {
   constructor(public keyboard: Keyboard) { }
 
   ngOnInit() {
-    
+
   }
 
   segmentChanged(event: any) {

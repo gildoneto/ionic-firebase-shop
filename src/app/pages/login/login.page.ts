@@ -14,15 +14,15 @@ export class LoginPage implements OnInit {
   // a query é estática ou dinâmica
   // https://angular.io/guide/static-query-migration
   // https://github.com/angular/angular-cli/issues/14553
-  @ViewChild(IonSlides, {static:true}) slides: IonSlides;
+  @ViewChild(IonSlides, { static: true }) slides: IonSlides;
   public wavesPosition: number = 0;
   public wavesDifference: number = 80;
+  public userLogin: User = {};
+  public userRegister: User = {};
 
   constructor(public keyboard: Keyboard) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   segmentChanged(event: any) {
     if (event.detail.value === 'login') {
@@ -33,4 +33,6 @@ export class LoginPage implements OnInit {
       this.wavesPosition -= this.wavesDifference;
     }
   }
+
+  
 }

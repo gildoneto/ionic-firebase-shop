@@ -16,6 +16,19 @@ export const environment = {
 };
 
 /*
+Sistema finalizado. No momento as regras do firebase estão:
+match /Products/{productId} {
+    	allow read, create;
+
+      allow update: if
+      	request.resource.data.userId == request.auth.uid &&
+      	resource.data.userId == request.auth.uid
+
+      allow delete: if
+      	resource.data.userId == request.auth.uid
+*/
+
+/*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *

@@ -12,7 +12,7 @@ export class ProductService {
   constructor(private afs: AngularFirestore) {
     this.productsCollection = this.afs.collection<Product>('Products');
   }
-
+  // código que permite pegar o id do produto
   getProducts() {
     return this.productsCollection.snapshotChanges().pipe(
       map(actions => {

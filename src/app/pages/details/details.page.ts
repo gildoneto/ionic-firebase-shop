@@ -44,9 +44,9 @@ export class DetailsPage implements OnInit {
 
   async saveProduct() {
     await this.presentLoading();
-
+    //pegando o id do usuário
     this.product.userId = this.authService.getAuth().currentUser.uid;
-
+    //se já existir produto, atualiza. Se não existe, cria um novo produto.
     if (this.productId) {
       try {
         await this.productService.updateProduct(this.productId, this.product);

@@ -16,16 +16,29 @@ export const environment = {
 };
 
 /*
-Sistema finalizado. No momento as regras do firebase estão:
-match /Products/{productId} {
+Sistema finalizado. No momento as regras do firebase são [atualizado em 09/09/2019]:
+--------------------------------
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /Products/{productId} {
     	allow read, create;
 
-      allow update: if
-      	request.resource.data.userId == request.auth.uid &&
-      	resource.data.userId == request.auth.uid
+        allow update: if
+      	 request.resource.data.userId == request.auth.uid &&
+      	 resource.data.userId == request.auth.uid
 
       allow delete: if
       	resource.data.userId == request.auth.uid
+    }
+
+     match /Users/{userId} {
+    	allow read, create, update, delete;
+
+    }
+  }
+}
+---------------------------------------
 */
 
 /*
